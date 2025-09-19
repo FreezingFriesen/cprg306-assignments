@@ -109,8 +109,8 @@ export default function Page() {
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
       <h1>
         Week 2 Link: 
-        <Link href="https://github.com/FreezingFriesen/cprg306-assignments/tree/main/app/week-2" target="_blank">
-        https://github.com/FreezingFriesen/cprg306-assignments/tree/main/app/week-2
+        <Link href="http://localhost:3000/week-2" target="_blank">
+        http://localhost:3000/week-2
         </Link>
       </h1>
     </main>
