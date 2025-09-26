@@ -113,6 +113,12 @@ export default function Page() {
         http://localhost:3000/week-2
         </Link>
       </h1>
+      <h1>
+        Week 3 Link: 
+        <Link href="http://localhost:3000/week-3" target="_blank">
+        http://localhost:3000/week-3
+        </Link>
+      </h1>
     </main>
   );
 }
