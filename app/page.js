@@ -105,26 +105,25 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main>
+    <main className="flex flex-col items-center justify-center p-4 gap-4">
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      <h2>
-        Week 2 Link: 
-        <Link href="http://localhost:3000/week-2" target="_blank">
-        http://localhost:3000/week-2
-        </Link>
-      </h2>
-      <h2>
-        Week 3 Link: 
-        <Link href="http://localhost:3000/week-3" target="_blank">
-        http://localhost:3000/week-3
-        </Link>
-      </h2>
-      <h2>
-        Week 4 Link: 
-        <Link href="http://localhost:3000/week-4" target="_blank">
-        http://localhost:3000/week-4
-        </Link>
-      </h2>
+      <div className="flex flex-col justify-center items-center bg-gray-700 text-white rounded max-w-md" style={{ padding: "8px", gap: "12px" }}>
+        <h2 className="hover:underline">
+          <Link href="http://localhost:3000/week-2" target="_blank">
+          Week 2 Link: http://localhost:3000/week-2
+          </Link>
+        </h2>
+        <h2 className="hover:underline"> 
+          <Link href="http://localhost:3000/week-3" target="_blank">
+          Week 3 Link: http://localhost:3000/week-3
+          </Link>
+        </h2>
+        <h2 className="hover:underline">
+          <Link href="http://localhost:3000/week-4" target="_blank">
+          Week 4 Link: http://localhost:3000/week-4
+          </Link>
+        </h2>
+      </div>
     </main>
   );
 }
