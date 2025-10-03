@@ -107,18 +107,24 @@ export default function Page() {
   return (
     <main>
       <h1>CPRG 306: Web Development 2 - Assignments</h1>
-      <h1>
+      <h2>
         Week 2 Link: 
         <Link href="http://localhost:3000/week-2" target="_blank">
         http://localhost:3000/week-2
         </Link>
-      </h1>
-      <h1>
+      </h2>
+      <h2>
         Week 3 Link: 
         <Link href="http://localhost:3000/week-3" target="_blank">
         http://localhost:3000/week-3
         </Link>
-      </h1>
+      </h2>
+      <h2>
+        Week 4 Link: 
+        <Link href="http://localhost:3000/week-4" target="_blank">
+        http://localhost:3000/week-4
+        </Link>
+      </h2>
     </main>
   );
 }
