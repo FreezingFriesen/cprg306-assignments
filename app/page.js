@@ -123,6 +123,11 @@ export default function Page() {
           Week 4 Link: http://localhost:3000/week-4
           </Link>
         </h2>
+        <h2 className="hover:underline">
+          <Link href="http://localhost:3000/week-5" target="_blank">
+          Week 5 Link: http://localhost:3000/week-5
+          </Link>
+        </h2>
       </div>
     </main>
   );
