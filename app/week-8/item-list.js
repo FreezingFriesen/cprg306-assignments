@@ -2,12 +2,13 @@
 import { useState } from "react";
 import Item from "./item";
 
-// ItemList now receives items via props and does not mutate them
-export default function ItemList({ items = [] }) {
+// ItemList component to display and sort a list of items
+export default function ItemList({ items = [], onItemSelect = () => {} }) {
   const [sortBy, setSortBy] = useState("name");
 
   // make a copy before sorting to avoid mutating the prop
   const sortedItems = [...items].sort((a, b) => {
+    
     if (sortBy === "name") {
       return (a.name || "").localeCompare(b.name || "");
     } else if (sortBy === "category") {
@@ -16,6 +17,7 @@ export default function ItemList({ items = [] }) {
     return 0;
   });
 
+  // Render the sorted item list with sorting controls
   return (
     <div className="flex flex-col items-center">
       <div className="mb-4 flex gap-2">
@@ -44,12 +46,11 @@ export default function ItemList({ items = [] }) {
       <ul className="flex flex-col items-center">
         {sortedItems.map((item) => (
           <Item
-            key={
-              item.id ?? item.name ?? Math.random().toString(36).slice(2, 9)
-            }
+            key={item.id ?? item.name ?? Math.random().toString(36).slice(2, 9)}
             name={item.name}
             quantity={item.quantity}
             category={item.category}
+            onSelect={() => onItemSelect(item)} // pass the item back to parent when clicked
           />
         ))}
       </ul>
