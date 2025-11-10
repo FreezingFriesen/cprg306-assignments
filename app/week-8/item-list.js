@@ -50,7 +50,7 @@ export default function ItemList({ items = [], onItemSelect = () => {} }) {
             name={item.name}
             quantity={item.quantity}
             category={item.category}
-            onSelect={() => onItemSelect(item)} // pass the item back to parent when clicked
+            onSelect={() => onItemSelect(item)}
           />
         ))}
       </ul>
