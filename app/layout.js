@@ -16,14 +16,16 @@ export const metadata = {
   description: "A simple shopping list application",
 };
 
+import { AuthContextProvider } from "../contexts/AuthContext.js";
+
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
-      </body>
+        <AuthContextProvider>{children}</AuthContextProvider>      </body>
     </html>
   );
 }
