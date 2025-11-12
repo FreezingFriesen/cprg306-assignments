@@ -2,8 +2,9 @@
 import { useState } from "react";
 import Item from "./item";
 
+
 // ItemList component to display and sort a list of items
-export default function ItemList({ items = [], onItemSelect = () => {} }) {
+export default function ItemList({ items = [], onItemSelect = () => {}, onItemDelete = () => {} }) {
   const [sortBy, setSortBy] = useState("name");
 
   // make a copy before sorting to avoid mutating the prop
@@ -43,14 +44,16 @@ export default function ItemList({ items = [], onItemSelect = () => {} }) {
         </button>
       </div>
 
+      {/* Render items once, include delete handler */}
       <ul className="flex flex-col items-center">
         {sortedItems.map((item) => (
           <Item
-            key={item.id ?? item.name ?? Math.random().toString(36).slice(2, 9)}
+            key={item.id ?? item.name} // prefer stable id
             name={item.name}
             quantity={item.quantity}
             category={item.category}
             onSelect={() => onItemSelect(item)}
+            onDelete={() => onItemDelete(item.id)}
           />
         ))}
       </ul>
